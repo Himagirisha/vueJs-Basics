@@ -4,6 +4,21 @@ let app = Vue.createApp({
       counter: 40,
     };
   },
+  computed:{
+      dcounter(){
+        return this.counter*2
+      }
+  },
+  watch:{
+    counter(value){
+      if (value>50){
+        setTimeout(()=>{
+          this.counter=0
+        },3000)
+      }
+    }
+
+  },
   methods: {
     increment() {
       console.log("increment executed");

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fruitBucket</title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="fruitBucket">
+      <h1>Vue fruit bucket</h1>
+      <input type="text" placeholder="enter fruits" v-model="newFruitValue" />
+      <button @click="addFruit">+</button>
+       <p v-if="fruits.length===0">empty...add fruits</p>
+      <ul else>
+        <li v-for="(fruit,index) in fruits" :key="index" @click="delFruit(index)">
+          index {{index}}:{{fruit}}
+        </li>
+      </ul>
+    </div>
+    <script src="./App.js"></script>
+  </body>
+</html>

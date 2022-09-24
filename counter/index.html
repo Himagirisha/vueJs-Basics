@@ -10,8 +10,10 @@
   <body>
     <div id="events">
       <h1>Counter:{{counter}}</h1>
+      <h2>Double counter:{{dcounter}}</h2>
       <button v-on:click="increment">Increment</button>
       <button v-on:click="decrement">Decrement</button>
+      <button v-on:click="reset">reset</button>
       <!-- to persist intial value and it will be evaluated only once -->
       <h1 v-once>Starting value of Counter:{{counter}}</h1>
       <form v-on:submit.prevent="handleSubmit">
